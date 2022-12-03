@@ -1012,8 +1012,10 @@ a {
 }
 .time ul li {
     margin: 10px 10px 60px;
-    font-size: smaller;
-    padding: 5px 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--main-color);
+    padding: 20px 15px;
     border: 1px solid #d1d1d1;
     position: relative;
     border-radius: 0 0 5px 5px;
@@ -1024,17 +1026,17 @@ a {
 .time ul li::before {
     content: attr(chikh);
     position: absolute;
-    top: -205%;
+    top: -53%;
     left: -1px;
     border: 1px solid #d1d1d1;
     width: 100%;
-    height: 200%; 
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
-    color: var(--main-color);
-    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    font-weight:normal;
     border-radius: 5px 5px 0 0;
     z-index: 50;
 }
