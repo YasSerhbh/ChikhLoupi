@@ -1,0 +1,532 @@
+/*                              Start Codes                            */
+
+/* Container  */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #eee;
+}
+:root {
+    --main-color: #2196F3;
+    --sec-color: #1787e0;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/*                          Start Codes End                                     */
+
+
+.header {
+    background-color: #fff;
+    height: fit-content;
+}
+.header .logo a {
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 20px ;
+    cursor: pointer;
+    width: fit-content;
+    /* text-decoration: none; */
+}
+.header .logo {
+    height: 57px;
+    display: flex;
+}
+.header > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .title {
+    font-weight: bold;
+    font-size: 4vw;
+    text-align: center;
+    /* color: var(--sec-color); */
+}
+.header .category {
+    text-align: center;
+    background-color: var(--sec-color);
+    padding: 3px;
+    border-radius: 6px;
+    color: white;
+}
+
+
+
+
+/* Color; #55360f */
+.game {
+    margin-top: 40px;
+}
+.game .con-1 {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(2 , minmax(300px, 1fr));
+}
+@media (max-width: 700px) {
+    .game .con-1 {
+        grid-template-columns: minmax(300px, 1fr);
+    }
+}
+.game .draw {
+    background-color: #fff;
+    min-height: 360px;
+    position: relative;
+}
+
+.draw .lard {
+    height: 6px;
+    width: 220px;
+    background: #55360f;
+    position: absolute;
+    bottom: 10%;
+    left: 15%;
+}
+.draw .stand {
+    width: 6px;
+    height: 250px;
+    background: #55360f;
+    position: absolute;
+    left: 25%;
+    bottom: 10%;
+    transition: 800ms;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+.draw.wrong-1 .stand {
+    transform: rotateX(0deg);
+}
+
+.draw .stand::before {
+    content: "";
+    background: #55360f;
+    position: absolute;
+    width: 6px;
+    height: 50px;
+    left: 200%;
+    bottom: 0;
+    transform: rotate(150deg);
+}
+.draw .stand::after {
+    content: "";
+    background: #55360f;
+    position: absolute;
+    width: 6px;
+    height: 50px;
+    right: 200%;
+    bottom: 0;
+    transform: rotate(-150deg);
+}
+.draw .litched {
+    background: #55360f;
+    height: 6px;
+    width: 200px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transition: 700ms;
+    transform: rotateY(90deg);
+    transform-origin: left;
+}
+.draw.wrong-2 .litched {
+    transform: rotateY(0deg);
+}
+.draw .litched::after {
+    content: "";
+    background: #55360f;
+    height: 6px;
+    width: 50px;
+    position: absolute;
+    transform: rotate(-25deg);
+    top: 170%;
+    left: 10%;
+}
+.draw .rope {
+    width: 2px;
+    height: 45px;
+    background: #000;
+    position: absolute;
+    left: 200px;
+    top: 21.8%;
+    transition: 700ms;
+    transform: rotateX(90deg);
+    transform-origin: top;
+}
+.draw.wrong-3 .rope {
+    transform: rotateX(0deg);
+}
+.draw .lhaj .head {
+    background: inherit;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: #000 solid 3px;
+    position: absolute;
+    left: 181px;
+    top: 33.4%;
+    transition: 700ms;
+    transform: rotateX(90deg);
+    transform-origin: top;
+}
+.draw.wrong-4 .lhaj .head {
+    transform: rotateX(0deg);
+}
+.lhaj .body {
+    background: #000;
+    width: 3px;
+    height: 70px;
+    position: absolute;
+    left: 200px;
+    top: 44%;
+    transition: 700ms;
+    transform: rotateX(90deg);
+    transform-origin: top;
+}
+.draw.wrong-5 .lhaj .body {
+    transform: rotateX(0deg);
+}
+
+.lhaj .hands {
+    transition: 700ms;
+    transform: rotateY(90deg);
+    top: 45%;
+    position: absolute;
+    left: 200px;
+}
+.draw.wrong-6 .lhaj .hands {
+    transform: rotateY(0deg);
+}
+.lhaj .hands::before {
+    content: "";
+    background: #000;
+    width: 3px;
+    height: 35px;
+    position: absolute;
+    left: 12px;
+    /* top: 45%; */
+    transform: rotate(45deg);
+}
+.lhaj .hands::after {
+    content: "";
+    background: #000;
+    width: 3px;
+    height: 35px;
+    position: absolute;
+    left: -12px;
+    /* top: 45%; */
+    transform: rotate(-45deg);
+}
+.lhaj .legs {
+    position: absolute;
+    top: 61%;
+    left: 200px;
+    transition: 700ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+.draw.wrong-7 .legs {
+    transform: rotateX(0deg);
+}
+.lhaj .legs::before {
+    content: "";
+    background: #000;
+    width: 3px;
+    height: 35px;
+    position: absolute;
+    left: 12px;
+    transform: rotate(135deg);
+}
+.lhaj .legs::after {
+    content: "";
+    background: #000;
+    width: 3px;
+    height: 35px;
+    position: absolute;
+    left: -12px;
+    transform: rotate(-135deg);
+}
+
+
+
+.letters {
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+.letters .letter {
+    background: var(--main-color);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.9;
+    transition: 100ms;
+}
+.letter:hover {
+    opacity: 1;
+}
+
+.harf {
+    background: #fff;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--sec-color);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 200ms;
+}
+.harf-space {
+    width: 25px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--sec-color);
+}
+.harf:hover {
+    box-shadow: 0px 0px 9px 0px;
+}
+.word {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+.Clicked {
+    cursor: default !important;
+    opacity: 0.5 !important;
+}
+
+.woon, .woon-2 {
+    width: 70%;
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    position: absolute;
+    left: 50%;
+    transition: 1000ms;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 30px;
+    z-index: 9;
+}
+.woon {
+    background: #00df1b;
+}
+.woon-2 {
+    background: red;
+}
+.woon.show, .woon-2.show {
+    transform: translate(-50%, -50%) scale(1);
+}
+.yw, .yw-2 {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+.cong, .cong-2 {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    padding: 0px 10px;
+}
+.cls-2, .cls {
+    background: transparent;
+    padding: 5px 10px;
+    border-radius: 50%;
+    position: absolute;
+    /* color: white; */
+    right: 25px;
+    border: 1px solid black;
+    top: 10px;
+    cursor: pointer;
+}
+
+.boo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #eee;
+    opacity: 0.7;
+    display: none;
+    z-index: 1;
+}
+.gagne {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 5;
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*                               FOOTER                                   */
+footer {
+    color: #b9b9b9;
+    background: #191919;
+    margin-top: 50px;
+}
+.fooot {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 50px 0;
+}
+.fooot .foot1 h1 {
+    color: #fff;
+}
+.ics .icc {
+    background: #313131;
+    margin: 7px;
+    font-size: 25px;
+    padding: 18px;
+    transition: 300ms;
+}
+.ics .fa-facebook-f:hover {
+    background: #0c86ef;
+}
+.ics .fa-twitter:hover {
+    background: #1d9bf0;
+}
+.ics .fa-instagram:hover {
+    background: #fe7500;
+}
+.fooot .foot1 p {
+    line-height: 2;
+}
+.foot2 {
+    display: flex;
+    align-items: center;
+}
+.fooot .foot2 ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\F101";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+.foot2 ul li {
+    margin: 15px;
+    height: 30px;
+    width: 200px;
+    padding: 5px;
+    border-bottom: 1px solid #444;
+    transition: 300ms;
+} 
+.foot2 ul li:hover {
+    padding-left: 20px;
+    color:  #fff;
+}
+.foot3 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.foot3 i {
+    color: var(--main-color);
+    font-size: 30px;
+    margin-right: 10px;
+}
+.foot3 div {
+    margin: 20px;
+}
+.foot3 .loca {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.foot3 .ahora {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.foot3 span {
+    transition: 300ms;
+}
+.phona span:hover {
+    color: #fff;
+}
+footer hr {
+    margin: 0;
+}
+.maria {
+    text-align: center;
+    padding: 30px 10px;
+    color: #fff;
+}
