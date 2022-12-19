@@ -73,12 +73,13 @@ a {
 .ul1 {
     display: flex;
 }
-.lili {
+.lili, .lili1 {
     padding: 20px;
     font-weight: 600;
     cursor: pointer;
     transition: 200ms;
     position: relative;
+    --transf-before: rotateY(90deg)
 }
 .lili::before {
     content: "";
@@ -91,6 +92,20 @@ a {
     transform: rotateY(90deg);
     transform-origin: top left;
     transition: 200ms;
+    color: blue;
+}
+.lili1::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    border-top: var(--main-color) 5px solid;
+    transform: var(--transf-before);
+    transform-origin: top left;
+    transition: 200ms;
+    color: blue;
 }
 
 .lili:hover::before {
@@ -167,16 +182,13 @@ a {
     transform: scaleX(1);
 }
 
-.linko:hover .menu {
-    display: block;
-}
 @media (max-width:620px) {
     .header > .container {
         flex-direction: column;
     }
 }
 @media (max-width:485px) {
-    .lili {
+    .lili, .lili1 {
         font-size:smaller ;
         padding: 10px;
     }
@@ -186,7 +198,7 @@ a {
     }
 }
 @media (max-width:370px) {
-    .lili {
+    .lili, .lili1 {
         font-size: x-small;
         padding: 7px;
     }
@@ -224,6 +236,17 @@ a {
     width: 20%;
     transform: skewX(45deg);
     z-index: 9;
+}
+
+.scroller {
+    position: fixed;
+    height: 3px;
+    width: 0%;
+    top: 0;
+    left: 0;
+    transition: 200ms;
+    background: var(--main-color);
+    z-index: 99999;
 }
 /*                        HEADER-END                                        */
 
