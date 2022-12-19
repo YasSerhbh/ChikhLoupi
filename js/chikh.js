@@ -1,6 +1,6 @@
 
 // Birthday
-var birthday = new Date('20 Dec 2022').getTime()
+var birthday = new Date('20 Dec 2023').getTime()
 
 var dayss = document.getElementById("days")
 var hourss = document.getElementById("hours")
