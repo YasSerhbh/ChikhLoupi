@@ -72,4 +72,4 @@ document.addEventListener("click", e => {
 
 var year = new Date().getFullYear()
 
-document.querySelector(".maria").innerHTML = "Created By El Chikh El Loupeeeeeiii  Copyright&copy; 2022"
+document.querySelector(".maria").innerHTML = `Created By El Chikh El Loupeeeeeiii  Copyright&copy; ${year}`
