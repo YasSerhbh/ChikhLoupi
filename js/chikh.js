@@ -69,3 +69,7 @@ document.addEventListener("click", e => {
         menu.style.display = "none"
     }}
 })
+
+var year = new Date().getFullYear()
+
+document.querySelector(".maria").innerHTML = "Created By El Chikh El Loupeeeeeiii  Copyright&copy; 2022"
