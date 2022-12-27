@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/quiz.css">
+    <title>ChikhLoupi - Quiz Game</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo"><a href="https://chikhloupi.lol"> ChikhLoupi</a></div>
+            <div class="title">Quiz Game</div>
+            <div class="categorie">Category: <span class="categ">unselected</span></div>
+        </div>
+    </div>
+    <div class="start-game">
+        <form action="" class="formaa">
+           <label for="ch-cat">Choose Category</label>
+            <select name="category" id="ch-cat" class="sel-cat">
+                <option value="arts_and_literature">Art & Literature</option>
+                <option value="film_and_tv">Film & TV</option>
+                <option value="food_and_drink">Food & Drink</option>
+                <option value="general_knowledge">General Knowledge</option>
+                <option value="geography">Geography</option>
+                <option value="history">History</option>
+                <option value="music">Music</option>
+                <option value="science">Science</option>
+                <option value="society_and_culture">Society & Culture</option>
+                <option selected value="sport_and_leisure">Sport & Leisure</option>
+            </select>
+            <input type="submit" value="Choose">
+        </form>
+        <div class="info">
+            <h3>Notes:</h3>
+            <p>- Once You Click Choose You'll Have 10 Questions About The Chosen Category</p>
+            <p>- You Have 10 Seconds For Each Question</p>
+            <p>- When The Time Is Over, The Selected Answer Will Be Chosen</p>
+        </div>
+    </div>
+    <div class="game">
+        <div class="question">Question</div>
+        <div class="answers">
+        <div class="ans ans-1"><input type="radio" name="answer" id="answer-1">
+        <label for="answer-1">Answer 1</label>
+        </div>
+        <div class="ans ans-2"><input type="radio" name="answer" id="answer-2">
+        <label for="answer-2">Answer 2</label>
+        </div>
+        <div class="ans ans-3"><input type="radio" name="answer" id="answer-3">
+        <label for="answer-3">Answer 3</label>
+        </div>
+        <div class="ans ans-4"><input type="radio" name="answer" id="answer-4">
+        <label for="answer-4">Answer 4</label>
+        </div>
+    </div>
+    <button class="buttton" onclick="choose()">Choose Answer</button>
+    <div class="details">
+        <div class="questions-num">
+            <span class="on bull"></span>
+            <span class="bull"></span>
+            <span class="bull"></span>
+            <span class="bull"></span>
+            <span class="bull"></span>
+            <span class="bull"></span>
+            <span class="bull"></span>
+            <span class="bull"></span>
+            <span class="bull"></span>
+            <span class="bull"></span>
+        </div>
+        <div class="countdown">00:10</div>
+    </div>
+</div>
+    <div class="end-game">
+        <div class="tit"></div>
+        <p class="grade">You've got 10/10</p>
+        <button onclick="window.location.reload()">Try Again</button>
+    </div>
+    <footer>
+        <div class="container">
+        <div class="fooot">
+            <div class="foot1">
+                <h1>Chikh Loupi</h1>
+                <div class="ics">
+                    <a href="https://www.facebook.com/zuck" target="_blank"><i class="fa-brands fa-facebook-f icc"></i></a>
+                    <a href="https://twitter.com/elonmusk" target="_blank" ><i class="fa-brands fa-twitter icc"></i></a>
+                    <a href="https://www.instagram.com/instagram/" target="_blank" ><i class="fa-brands fa-instagram icc"></i></a>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ex neque provident, earum labore</p>
+            </div>
+            <div class="foot2">
+                <ul>
+                    <a href="hangman-game"><li>Hangman Game</li></a>
+                    <a href=""><li>Quiz Game</li></a>
+                    <a href="#"><li>Link 3</li></a>
+                    <a href="#"><li>Link 4</li></a>
+                    <a href="#"><li>Link 5</li></a>
+                </ul>
+            </div>
+            <div class="foot3">
+                <div class="loca">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span> Algeria, Oran, Hai El Hamri </span>
+                </div>
+                <div class="ahora">
+                    <i class="fa-solid fa-clock"></i>
+                    <span> Business Hours: From 12PM to 11:59AM </span>
+                </div>
+                <div class="phona">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="num1"><a href="tel:1548">1548</a></span>
+                    <span class="num2"><a href="tel:1055">1055</a></span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <hr>
+        <div class="maria">
+        </div>
+    </footer>
+    <script src="js/quiz.js"></script>
+</body>
+</html>
