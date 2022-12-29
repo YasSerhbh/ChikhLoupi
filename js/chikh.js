@@ -70,6 +70,63 @@ document.addEventListener("click", e => {
     }}
 })
 
-var year = new Date().getFullYear()
 
+
+// Req Options
+var myHeaders = new Headers();
+myHeaders.append("apikey", "TtCzYzPHx9j6XU5R70E9dWTb1kGsDR1i");
+
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow',
+  headers: myHeaders
+};
+
+
+document.querySelector(".trr").onclick = function () {
+
+    // Get Symbols
+var symbols;
+fetch("https://api.apilayer.com/exchangerates_data/symbols", requestOptions)
+  .then(response => response.text())
+  .then(result => symbols = JSON.parse(result)['symbols'])
+  .then(() => {
+    for (let i = 0; i < Object.keys(symbols).length; i++) {
+    var option = document.createElement("option")
+    var option2 = document.createElement("option")
+    option.setAttribute("value", Object.keys(symbols)[i])
+    option2.setAttribute("value", Object.keys(symbols)[i])
+    option.innerHTML = symbols[Object.keys(symbols)[i]]
+    option2.innerHTML = symbols[Object.keys(symbols)[i]]
+    document.querySelector("#to").appendChild(option)   // 00
+    document.querySelector("#from").appendChild(option2)  // 00
+  }
+  })
+  .catch(error => console.log('error', error));
+
+
+    this.style.transform = "scale(0)"
+    setTimeout(_ => {
+        this.style.display = "none"
+        document.querySelector(".conv").style.display = "flex"
+    }, 206)
+    setTimeout(_ => {
+        document.querySelector(".conv").style.transform = "scale(1)"
+    }, 500)
+}
+
+// Math.round(JSON.parse(result)['result'])
+
+document.querySelector(".conveert").onclick = function () {
+    //   Convert
+    fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${document.querySelector("#to").value}&from=${document.querySelector("#from").value}&amount=${document.querySelector(".amount").value}`, requestOptions)  // 00
+      .then(response => response.text())
+      .then(result => document.querySelector(".res").innerHTML = JSON.parse(result)['result'] < 1 ? `${document.querySelector(".amount").value} ${document.querySelector("#from").value} = ${JSON.parse(result)['result']} ${document.querySelector("#to").value}` : `${document.querySelector(".amount").value}${document.querySelector("#from").value} = ${Math.round(JSON.parse(result)['result'])}${document.querySelector("#to").value}`)    // 00
+      .catch(error => console.log('error', error));
+}
+
+
+
+
+var year = new Date().getFullYear()
 document.querySelector(".maria").innerHTML = `Created By El Chikh El Loupeeeeeiii  Copyright&copy; ${year}`
