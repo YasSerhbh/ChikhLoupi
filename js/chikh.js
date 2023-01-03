@@ -121,7 +121,7 @@ document.querySelector(".conveert").onclick = function () {
     //   Convert
     fetch(`https://api.apilayer.com/exchangerates_data/convert?to=${document.querySelector("#to").value}&from=${document.querySelector("#from").value}&amount=${document.querySelector(".amount").value}`, requestOptions)  // 00
       .then(response => response.text())
-      .then(result => document.querySelector(".res").innerHTML = JSON.parse(result)['result'] < 1 ? `${document.querySelector(".amount").value} ${document.querySelector("#from").value} = ${JSON.parse(result)['result']} ${document.querySelector("#to").value}` : `${document.querySelector(".amount").value}${document.querySelector("#from").value} = ${Math.round(JSON.parse(result)['result'])}${document.querySelector("#to").value}`)    // 00
+      .then(result => document.querySelector(".res").innerHTML = `${document.querySelector(".amount").value} ${document.querySelector("#from").value} = ${JSON.parse(result)['result'].toFixed(3)} ${document.querySelector("#to").value}` )   // 00
       .catch(error => console.log('error', error));
 }
 
