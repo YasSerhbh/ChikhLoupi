@@ -8,44 +8,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/hangman.css">
     <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/to-do.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <title>Chikh Loupi - Hangman Game</title>
+    <title>To Do List App</title>
 </head>
 <body>
     <div class="header">
         <div class="container">
             <div class="logo"><a href="https://chikhloupi.lol"> ChikhLoupi</a></div>
-            <div class="title">The Hangman Game</div>
-            <div class="category"></div>
+            <div class="title">To-Do List</div>
         </div>
     </div>
-    <div class="game">
-        <div class="container con-1">
-            <div class="draw">
-                <div class="lard"></div>
-                <div class="stand"></div>
-                <div class="litched"></div>
-                <div class="rope"></div>
-                <div class="lhaj">
-                    <div class="head"></div>
-                    <div class="body"></div>
-                    <div class="hands"></div>
-                    <div class="legs"></div>
-                </div>
+    <div class="app">
+            <div class="add-task">
+                <input type="text" class="aa" name="add" id="">
+                <input type="button" class="bb" value="Add Task">
             </div>
-            <div class="letters">
-                <div class="gagne"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="word"></div>
-        </div>
+            <div class="tasks">   </div>
     </div>
+
     <footer>
         <div class="container">
         <div class="fooot">
@@ -57,12 +42,16 @@
                     <a href="https://www.instagram.com/yasser__bm/" target="_blank" ><i class="fa-brands fa-instagram icc"></i></a>
                 </div>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora ex neque provident, earum labore</p>
+                <div class="mode">
+                    <div class="night"></div>
+                    <div class="light"></div>
+                </div>
             </div>
             <div class="foot2">
                 <ul>
-                    <a href=""><li>Hangman Game</li></a>
+                    <a href="hangman-game"><li>Hangman Game</li></a>
                     <a href="quiz-game"><li>Quiz Game</li></a>
-                    <a href="to-do"><li>To Do List</li></a>
+                    <a href=""><li>To Do List</li></a>
                     <a href="#"><li>Link 4</li></a>
                     <a href="#"><li>Link 5</li></a>
                 </ul>
@@ -89,11 +78,10 @@
             Created By El Chikh El Loupeeeeeiii  Copyright&copy; 2022
         </div>
     </footer>
-    <div class="woon"><p class="cong">Congratulation</p><p class="yw"></p><span class="cls">X</span></div>
-    <div class="woon-2"><p class="cong-2">You Failed</p><p class="yw-2">The Word is: khtek</p><span class="cls-2">X</span></div>
-    <div class="boo"></div>
-    <audio src="sounds/correct.mp3" class="corr"></audio>
-    <audio src="sounds/wrong.mp3" class="rong"></audio>
-    <script src="js/hangman.js"></script>
+    <!-- <i class="fa-solid fa-moon"></i> -->
+    <!-- <i class="fa-regular fa-moon"></i> -->
+    <!-- <i class="fa-solid fa-sun"></i> -->
+    <!-- <i class="fa-regular fa-sun"></i> -->
+    <script src="js/to-do.js"></script>
 </body>
 </html>
