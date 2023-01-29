@@ -115,4 +115,4 @@ document.querySelector(`.ans-${i}`).onclick = function () {
 
 
 var year = new Date().getFullYear()
-document.querySelector(".maria").innerHTML = `Created By El Chikh El Loupeeeeeiii  Copyright&copy; ${year}`
+document.querySelector(".maria").innerHTML = `Created By <span style="color: #2196F3;">YasSer</span>. Copyright&copy; ${year}`

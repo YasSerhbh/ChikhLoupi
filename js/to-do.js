@@ -146,3 +146,9 @@ night.onclick = function () {
 }
 
 // DARK MODE
+
+
+
+
+var year = new Date().getFullYear()
+document.querySelector(".maria").innerHTML = `Created By <span style="color: #2196F3;">YasSer</span>. Copyright&copy; ${year}`
