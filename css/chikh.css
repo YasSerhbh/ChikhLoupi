@@ -395,6 +395,7 @@ a {
     transform: translateX(-60%);
     transition: 500ms;
     cursor: default;
+    user-select:none;
 }
 .title:hover {
     color: white;
